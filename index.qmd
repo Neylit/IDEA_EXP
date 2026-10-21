@@ -73,4 +73,11 @@ El experimento permitirá identificar si existe una dosis con respuesta agronóm
 
 Esta propuesta plantea un experimento sencillo y medible para estudiar el efecto de distintas dosis de nitrógeno en el café. El uso de bloques, tratamientos comparables y mediciones repetidas ayudaría a obtener resultados más confiables. Antes de instalarlo, será necesario precisar la dosis de referencia, la duración y el número de plantas por parcela con apoyo de un asesor agrícola y de un análisis de suelo.
 
+
+## 9. Referencias bibliográficas 
+
+Granados Domínguez, N. N. (2020). Niveles de fertilización nitrogenada en el primer año de crecimiento del cafeto (Coffea arabica L.) variedad Catimor T-8667 a pleno sol en Tingo María [Tesis de grado, Universidad Nacional Agraria de la Selva]. https://hdl.handle.net/20.500.14292/2365
+
+Salgado Veramendi, N., & Ottos Díaz, E. (2025). Manual técnico: Interpretación de análisis de suelos, cálculos de encalado y fertilización para los cultivos de café y cacao. Instituto Nacional de Innovación Agraria.
+
 ---
