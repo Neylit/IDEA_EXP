@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Neylit">
 
-<title>Neylit-Yrigoin</title>
+<title>Efecto de la fertilización nitrogenada en el crecimiento y rendimiento del café</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -22,41 +23,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -84,13 +50,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Neylit-Yrigoin</h1>
+<h1 class="title">Efecto de la fertilización nitrogenada en el crecimiento y rendimiento del café</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Neylit </p>
+          </div>
+  </div>
     
   
     
@@ -101,26 +73,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="quarto" class="level2">
-<h2 class="anchored" data-anchor-id="quarto">Quarto</h2>
-<p>Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <a href="https://quarto.org" class="uri">https://quarto.org</a>.</p>
+<section id="planteamiento-del-problema" class="level2">
+<h2 class="anchored" data-anchor-id="planteamiento-del-problema">1. Planteamiento del problema</h2>
+<p>El café (<em>Coffea arabica</em> L.) es un cultivo de importancia económica para muchas familias agricultoras. Su crecimiento y rendimiento dependen de factores como la variedad, el clima, el manejo del suelo, el agua y la disponibilidad de nutrientes. Cuando el nitrógeno es insuficiente, las plantas pueden presentar crecimiento limitado y hojas pálidas; sin embargo, aplicar cantidades excesivas de fertilizante puede aumentar los costos y generar pérdidas de nutrientes hacia el ambiente.</p>
+<p>Por ello, se propone investigar la siguiente pregunta:</p>
+<p><strong>¿Cómo influyen diferentes dosis de fertilizante nitrogenado en el crecimiento y rendimiento de plantas de café?</strong></p>
 </section>
-<section id="running-code" class="level2">
-<h2 class="anchored" data-anchor-id="running-code">Running Code</h2>
-<p>When you click the <strong>Render</strong> button a document will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
-</div>
-</div>
-<p>You can add options to executable code like this</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 4</code></pre>
-</div>
-</div>
-<p>The <code>echo: false</code> option disables the printing of code (only output is displayed).</p>
+<section id="justificación" class="level2">
+<h2 class="anchored" data-anchor-id="justificación">2. Justificación</h2>
+<p>Este experimento permitiría comparar dosis de nitrógeno bajo condiciones de campo y generar información útil para mejorar el manejo de la fertilización. Una dosis apropiada puede favorecer el desarrollo vegetativo y la formación de frutos, mientras que una dosis excesiva no necesariamente produce mayores rendimientos. La propuesta también promueve el uso eficiente de los fertilizantes, la reducción de costos y el cuidado del suelo y del agua.</p>
+<p>La dosis óptima no se debe asumir de antemano: debe determinarse considerando el análisis de suelo, la edad del cafetal, la variedad, el clima y las recomendaciones técnicas locales.</p>
+</section>
+<section id="objetivos" class="level2">
+<h2 class="anchored" data-anchor-id="objetivos">3. Objetivos</h2>
+<section id="objetivo-general" class="level3">
+<h3 class="anchored" data-anchor-id="objetivo-general">Objetivo general</h3>
+<p>Evaluar el efecto de diferentes dosis de fertilización nitrogenada sobre el crecimiento y el rendimiento del cultivo de café.</p>
+</section>
+<section id="objetivos-específicos" class="level3">
+<h3 class="anchored" data-anchor-id="objetivos-específicos">Objetivos específicos</h3>
+<ul>
+<li>Comparar el crecimiento vegetativo de las plantas de café sometidas a distintas dosis de nitrógeno.</li>
+<li>Medir y comparar el rendimiento de café por parcela entre los tratamientos.</li>
+<li>Identificar qué tratamiento presenta el mejor equilibrio entre respuesta del cultivo y cantidad de fertilizante aplicada.</li>
+</ul>
+</section>
+</section>
+<section id="hipótesis" class="level2">
+<h2 class="anchored" data-anchor-id="hipótesis">4. Hipótesis</h2>
+<p>Hipótesis: Las diferentes dosis de fertilización nitrogenada generan diferencias significativas en el crecimiento y rendimiento del cultivo de café.</p>
+</section>
+<section id="diseño-experimental-propuesto" class="level2">
+<h2 class="anchored" data-anchor-id="diseño-experimental-propuesto">5. Diseño experimental propuesto</h2>
+<p>Se propone un diseño de bloques completos al azar (DBCA), con cuatro tratamientos y cuatro bloques, haciendo un total de 16 parcelas experimentales. Los tratamientos serán: T0, sin aplicación de nitrógeno; T1, con el 50 % de la dosis de referencia; T2, con el 100 % de la dosis de referencia; y T3, con el 150 % de la dosis de referencia. Esta dosis deberá establecerse previamente mediante un análisis de suelo y recomendaciones técnicas locales. En cada parcela se seleccionarán plantas centrales para su evaluación, evitando las plantas de borde. Todas las parcelas recibirán el mismo manejo agronómico, incluyendo control de malezas, sombra, riego, poda y control fitosanitario, de modo que la única diferencia entre los tratamientos sea la dosis de nitrógeno aplicada.</p>
+</section>
+<section id="metodología" class="level2">
+<h2 class="anchored" data-anchor-id="metodología">6. Metodología</h2>
+<section id="selección-del-área" class="level3">
+<h3 class="anchored" data-anchor-id="selección-del-área">6.1. Selección del área</h3>
+<p>Elegir un cafetal uniforme en variedad, edad y manejo, con acceso seguro y condiciones comparables. Registrar la ubicación, altitud, pendiente, sombra, edad de las plantas y antecedentes de fertilización.</p>
+</section>
+<section id="diagnóstico-inicial" class="level3">
+<h3 class="anchored" data-anchor-id="diagnóstico-inicial">6.2. Diagnóstico inicial</h3>
+<p>Tomar muestras representativas de suelo para analizar, según disponibilidad, pH, materia orgánica y nutrientes. Registrar el estado inicial de las plantas: altura, diámetro del tallo, número de ramas productivas y color general del follaje. Definir la dosis de referencia con orientación técnica.</p>
+</section>
+<section id="instalación-y-aplicación" class="level3">
+<h3 class="anchored" data-anchor-id="instalación-y-aplicación">6.3. Instalación y aplicación</h3>
+<p>Delimitar 16 parcelas y organizar cuatro bloques. Sortear la ubicación de T0, T1, T2 y T3 dentro de cada bloque. Aplicar el fertilizante de manera fraccionada y uniforme, siguiendo la recomendación local, la etiqueta del producto y las medidas de seguridad. Evitar aplicar antes de lluvias intensas o cerca de cursos de agua.</p>
+</section>
+<section id="variables-que-se-medirán" class="level3">
+<h3 class="anchored" data-anchor-id="variables-que-se-medirán">6.4. Variables que se medirán</h3>
+<p>Se medirán cinco variables principales: la altura de la planta, desde el nivel del suelo hasta el ápice, en centímetros, al inicio y cada dos o tres meses; el diámetro del tallo, utilizando un calibrador al inicio y al final del experimento; el número de ramas productivas, mediante el conteo de las ramas de las plantas seleccionadas antes de la cosecha; el rendimiento, registrando el peso de las cerezas de café cosechadas por parcela en kilogramos; y las características del follaje, observando el color de las hojas, los síntomas y los posibles daños durante cada evaluación. Para obtener resultados confiables, se marcarán las plantas seleccionadas y se utilizará el mismo método de medición durante todo el experimento. La duración del estudio deberá permitir evaluar el crecimiento de las plantas y, para determinar el rendimiento, abarcar el periodo productivo adecuado del cultivo.</p>
+</section>
+<section id="análisis-de-datos" class="level3">
+<h3 class="anchored" data-anchor-id="análisis-de-datos">6.5. Análisis de datos</h3>
+<p>Calcular el promedio de cada variable por parcela y comparar los tratamientos considerando el diseño en bloques. Si se cumplen los supuestos estadísticos, se puede utilizar un análisis de varianza (ANOVA) y una prueba de comparación de medias. También se deben presentar tablas o gráficos con promedios y variabilidad. La conclusión se basará en los datos obtenidos, no solo en las diferencias visuales.</p>
+</section>
+</section>
+<section id="resultados-esperados" class="level2">
+<h2 class="anchored" data-anchor-id="resultados-esperados">7. Resultados esperados</h2>
+<p>Se espera que las dosis de nitrógeno produzcan respuestas diferentes en el crecimiento y posiblemente en el rendimiento. El tratamiento sin nitrógeno añadido podría mostrar menor crecimiento si el suelo presenta deficiencia; las dosis intermedias podrían generar una respuesta favorable; y la dosis más alta podría no aumentar el rendimiento proporcionalmente. Estos son escenarios esperados, no resultados confirmados.</p>
+<p>El experimento permitirá identificar si existe una dosis con respuesta agronómica favorable en las condiciones evaluadas. Los resultados solo podrán recomendarse para cafetales con condiciones similares y deberán interpretarse junto con el análisis del suelo, los costos del fertilizante y el rendimiento cosechado.</p>
+</section>
+<section id="conclusión-de-la-propuesta" class="level2">
+<h2 class="anchored" data-anchor-id="conclusión-de-la-propuesta">8. Conclusión de la propuesta</h2>
+<p>Esta propuesta plantea un experimento sencillo y medible para estudiar el efecto de distintas dosis de nitrógeno en el café. El uso de bloques, tratamientos comparables y mediciones repetidas ayudaría a obtener resultados más confiables. Antes de instalarlo, será necesario precisar la dosis de referencia, la duración y el número de plantas por parcela con apoyo de un asesor agrícola y de un análisis de suelo.</p>
+<hr>
 </section>
 
 </main>
