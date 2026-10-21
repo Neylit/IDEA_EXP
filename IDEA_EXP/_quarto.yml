@@ -1,0 +1,23 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Experimento agrícola: Fertilización del café"
+  navbar:
+    background: "#24543b"
+    foreground: "#ffffff"
+    left:
+      - href: index.qmd
+        text: Inicio
+  page-footer:
+    center: "Propuesta académica de experimento agrícola | Cultivo de café"
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-title: "Contenido"
+    number-sections: true
+    lang: es
+    css: styles.css

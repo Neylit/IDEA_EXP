@@ -1,0 +1,108 @@
+---
+title: "Efecto de la fertilización nitrogenada en el crecimiento y rendimiento del café"
+subtitle: "Propuesta de experimento agrícola"
+author: "Neylit"
+date: "2026"
+---
+
+::: {.callout-note}
+**Idea central:** evaluar si diferentes dosis de nitrógeno mejoran el crecimiento y la producción del café, sin aplicar fertilizante de manera innecesaria.
+:::
+
+## 1. Planteamiento del problema
+
+El café (*Coffea arabica* L.) es un cultivo de importancia económica para muchas familias agricultoras. Su crecimiento y rendimiento dependen de factores como la variedad, el clima, el manejo del suelo, el agua y la disponibilidad de nutrientes. Cuando el nitrógeno es insuficiente, las plantas pueden presentar crecimiento limitado y hojas pálidas; sin embargo, aplicar cantidades excesivas de fertilizante puede aumentar los costos y generar pérdidas de nutrientes hacia el ambiente.
+
+Por ello, se propone investigar la siguiente pregunta:
+
+**¿Cómo influyen diferentes dosis de fertilizante nitrogenado en el crecimiento y rendimiento de plantas de café?**
+
+## 2. Justificación
+
+Este experimento permitiría comparar dosis de nitrógeno bajo condiciones de campo y generar información útil para mejorar el manejo de la fertilización. Una dosis apropiada puede favorecer el desarrollo vegetativo y la formación de frutos, mientras que una dosis excesiva no necesariamente produce mayores rendimientos. La propuesta también promueve el uso eficiente de los fertilizantes, la reducción de costos y el cuidado del suelo y del agua.
+
+La dosis óptima no se debe asumir de antemano: debe determinarse considerando el análisis de suelo, la edad del cafetal, la variedad, el clima y las recomendaciones técnicas locales.
+
+## 3. Objetivos
+
+### Objetivo general
+
+Evaluar el efecto de diferentes dosis de fertilización nitrogenada sobre el crecimiento y el rendimiento del cultivo de café.
+
+### Objetivos específicos
+
+- Comparar el crecimiento vegetativo de las plantas de café sometidas a distintas dosis de nitrógeno.
+- Medir y comparar el rendimiento de café por parcela entre los tratamientos.
+- Identificar qué tratamiento presenta el mejor equilibrio entre respuesta del cultivo y cantidad de fertilizante aplicada.
+
+## 4. Hipótesis
+
+**Hipótesis de investigación (H₁):** al menos una de las dosis de nitrógeno producirá diferencias en el crecimiento y/o rendimiento del café en comparación con las otras dosis.
+
+**Hipótesis nula (H₀):** no existirán diferencias significativas en el crecimiento ni en el rendimiento promedio entre las dosis evaluadas.
+
+## 5. Diseño experimental propuesto
+
+Se propone un **diseño de bloques completos al azar (DBCA)**, apropiado cuando existe variación del terreno, por ejemplo, en pendiente o fertilidad. Los bloques se ubicarían siguiendo el gradiente principal del terreno y, dentro de cada bloque, los tratamientos se asignarían al azar.
+
+| Tratamiento | Dosis de nitrógeno propuesta |
+|---|---|
+| T0 | 0 % de la dosis de referencia (control, sin N añadido) |
+| T1 | 50 % de la dosis de referencia |
+| T2 | 100 % de la dosis de referencia |
+| T3 | 150 % de la dosis de referencia |
+
+Se plantean **4 tratamientos y 4 bloques**, con un total de **16 parcelas experimentales**. La dosis de referencia debe definirse antes de iniciar el ensayo a partir del análisis de suelo y de una recomendación técnica local; no debe interpretarse como una dosis universal para todos los cafetales.
+
+Cada parcela debe contener suficientes plantas para medir las plantas centrales y dejar plantas de borde. Todas las parcelas recibirán el mismo manejo de malezas, sombra, riego (si corresponde), poda y control fitosanitario. La única diferencia planificada entre tratamientos será la dosis de nitrógeno. Los demás nutrientes se manejarán de forma uniforme y de acuerdo con el diagnóstico del suelo.
+
+## 6. Metodología
+
+### 6.1. Selección del área
+
+Elegir un cafetal uniforme en variedad, edad y manejo, con acceso seguro y condiciones comparables. Registrar la ubicación, altitud, pendiente, sombra, edad de las plantas y antecedentes de fertilización.
+
+### 6.2. Diagnóstico inicial
+
+Tomar muestras representativas de suelo para analizar, según disponibilidad, pH, materia orgánica y nutrientes. Registrar el estado inicial de las plantas: altura, diámetro del tallo, número de ramas productivas y color general del follaje. Definir la dosis de referencia con orientación técnica.
+
+### 6.3. Instalación y aplicación
+
+Delimitar 16 parcelas y organizar cuatro bloques. Sortear la ubicación de T0, T1, T2 y T3 dentro de cada bloque. Aplicar el fertilizante de manera fraccionada y uniforme, siguiendo la recomendación local, la etiqueta del producto y las medidas de seguridad. Evitar aplicar antes de lluvias intensas o cerca de cursos de agua.
+
+### 6.4. Variables que se medirán
+
+| Variable | Cómo medirla | Momento |
+|---|---|---|
+| Altura de planta | Desde el nivel del suelo hasta el ápice, en centímetros | Inicio y cada 2–3 meses |
+| Diámetro del tallo | Con calibrador, siempre a la misma altura | Inicio y final |
+| Número de ramas productivas | Conteo en plantas seleccionadas | Antes de la cosecha |
+| Rendimiento | Peso de cereza cosechada por parcela, en kg | En cada cosecha |
+| Observaciones del follaje | Registrar color, síntomas y posibles daños | En cada evaluación |
+
+Se recomienda marcar las plantas que serán evaluadas y mantener el mismo método de medición durante todo el ensayo. La duración debe cubrir una etapa de crecimiento y, para evaluar rendimiento, el periodo productivo adecuado del cafetal.
+
+### 6.5. Análisis de datos
+
+Calcular el promedio de cada variable por parcela y comparar los tratamientos considerando el diseño en bloques. Si se cumplen los supuestos estadísticos, se puede utilizar un análisis de varianza (ANOVA) y una prueba de comparación de medias. También se deben presentar tablas o gráficos con promedios y variabilidad. La conclusión se basará en los datos obtenidos, no solo en las diferencias visuales.
+
+## 7. Resultados esperados
+
+Se espera que las dosis de nitrógeno produzcan respuestas diferentes en el crecimiento y posiblemente en el rendimiento. El tratamiento sin nitrógeno añadido podría mostrar menor crecimiento si el suelo presenta deficiencia; las dosis intermedias podrían generar una respuesta favorable; y la dosis más alta podría no aumentar el rendimiento proporcionalmente. Estos son escenarios esperados, no resultados confirmados.
+
+El experimento permitirá identificar si existe una dosis con respuesta agronómica favorable en las condiciones evaluadas. Los resultados solo podrán recomendarse para cafetales con condiciones similares y deberán interpretarse junto con el análisis del suelo, los costos del fertilizante y el rendimiento cosechado.
+
+## 8. Importancia para el agricultor
+
+- **Productividad:** relacionar la nutrición del cultivo con el crecimiento y la cosecha.
+- **Economía:** evitar gastos en fertilizante que no se traduzcan en una respuesta útil.
+- **Ambiente:** reducir el riesgo de pérdidas de nutrientes mediante una aplicación responsable.
+- **Toma de decisiones:** basar las recomendaciones en mediciones y no únicamente en la apariencia de las plantas.
+
+## 9. Conclusión de la propuesta
+
+Esta propuesta plantea un experimento sencillo y medible para estudiar el efecto de distintas dosis de nitrógeno en el café. El uso de bloques, tratamientos comparables y mediciones repetidas ayudaría a obtener resultados más confiables. Antes de instalarlo, será necesario precisar la dosis de referencia, la duración y el número de plantas por parcela con apoyo de un asesor agrícola y de un análisis de suelo.
+
+---
+
+*Nota académica: esta página presenta una idea de experimento; no contiene resultados de campo reales ni constituye una recomendación universal de fertilización.*

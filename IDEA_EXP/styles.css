@@ -1,0 +1,18 @@
+/* Estilo visual sencillo para el sitio */
+:root {
+  --coffee-green: #24543b;
+  --coffee-light: #f4f7f2;
+}
+.navbar {
+  border-bottom: 3px solid #d4a85b;
+}
+h1, h2, h3 {
+  color: var(--coffee-green);
+}
+.callout-note {
+  border-left-color: var(--coffee-green);
+  background: var(--coffee-light);
+}
+body {
+  line-height: 1.65;
+}
