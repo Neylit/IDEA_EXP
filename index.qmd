@@ -1,83 +1,230 @@
 ---
-title: "Efecto de la fertilización nitrogenada en el crecimiento y rendimiento del café"
-author: "Neylit"
+title: "Evaluación de tres tratamientos fitosanitarios para el control del pie negro (Rosellinia bunodes) en dos variedades de café (Coffea arabica L.)"
+author: "Neylit-Yrigoin-Cubas"
 format: html
 editor: visual
 editor_options: 
   chunk_output_type: console
 ---
 
-## 1. Planteamiento del problema
-El café (*Coffea arabica* L.) es un cultivo de importancia económica para muchas familias agricultoras. Su crecimiento y rendimiento dependen de factores como la variedad, el clima, el manejo del suelo, el agua y la disponibilidad de nutrientes. Cuando el nitrógeno es insuficiente, las plantas pueden presentar crecimiento limitado y hojas pálidas; sin embargo, aplicar cantidades excesivas de fertilizante puede aumentar los costos y generar pérdidas de nutrientes hacia el ambiente.
+# 1. Introducción
 
-Por ello, se propone investigar la siguiente pregunta:
+El café (*Coffea arabica* L.) es un cultivo de importancia agrícola. El pie negro, asociado al hongo *Rosellinia bunodes*, puede afectar las raíces y el desarrollo de las plantas. Por ello, se propone evaluar tres tratamientos fitosanitarios y un testigo en dos variedades de café.
 
-**¿Cómo influyen diferentes dosis de fertilizante nitrogenado en el crecimiento y rendimiento de plantas de café?**
+# 2. Objetivos
 
-## 2. Justificación
+**Objetivo general**
 
-Este experimento permitiría comparar dosis de nitrógeno bajo condiciones de campo y generar información útil para mejorar el manejo de la fertilización. Una dosis apropiada puede favorecer el desarrollo vegetativo y la formación de frutos, mientras que una dosis excesiva no necesariamente produce mayores rendimientos. La propuesta también promueve el uso eficiente de los fertilizantes, la reducción de costos y el cuidado del suelo y del agua.
+Evaluar el efecto de tres tratamientos y un testigo sobre la mortalidad y el crecimiento de dos variedades de café.
 
-La dosis óptima no se debe asumir de antemano: debe determinarse considerando el análisis de suelo, la edad del cafetal, la variedad, el clima y las recomendaciones técnicas locales.
+**Objetivos específicos**
 
-## 3. Objetivos
+- Comparar la mortalidad de las plantas entre tratamientos.
+- Evaluar el crecimiento de las dos variedades de café.
+- Identificar el tratamiento con mejor respuesta bajo las condiciones del experimento.
 
-### Objetivo general
+# 3. Hipótesis
 
-Evaluar el efecto de diferentes dosis de fertilización nitrogenada sobre el crecimiento y el rendimiento del cultivo de café.
+Hipótesis: Al menos uno de los tratamientos fitosanitarios presentará diferencias en el control del pie negro y en el desarrollo de las dos variedades de café (Coffea arabica L.).
 
-### Objetivos específicos
+# 4. Diseño del experimento 
 
-- Comparar el crecimiento vegetativo de las plantas de café sometidas a distintas dosis de nitrógeno.
-- Medir y comparar el rendimiento de café por parcela entre los tratamientos.
-- Identificar qué tratamiento presenta el mejor equilibrio entre respuesta del cultivo y cantidad de fertilizante aplicada.
+Se propone realizar el experimento mediante un diseño de bloques completos al azar (DBCA) con arreglo factorial de 2 × 4, utilizando dos variedades de café: Catimor (V1) y Caturra(V2), y cuatro tratamientos: testigo (T0), pentacloro(T1), Trichoderma (T2) y orín fermentado(T3). El experimento contará con tres bloques o repeticiones, haciendo un total de ocho combinaciones experimentales y 24 unidades experimentales.
 
-## 4. Hipótesis
+Cada bloque estará conformado por las ocho combinaciones de variedades y tratamientos, distribuidas aleatoriamente. Se evaluará el efecto de los tratamientos y las variedades sobre la mortalidad de las plantas, altura, circunferencia del tallo, número de hojas, peso y desarrollo de las raíces. De esta manera, se busca identificar qué tratamiento presenta mejores resultados para el desarrollo y la sanidad de las plantas de café.
 
-Hipótesis: Las diferentes dosis de fertilización nitrogenada generan diferencias significativas en el crecimiento y rendimiento del cultivo de café.
+```{r}
+source("https://inkaverse.com/setup.r")
 
-## 5. Diseño experimental propuesto
+factores <- list(
+  Variedad = c("Catimor", "Caturra"),
+  Tratamiento = c("T0", "T1", "T2", "T3")
+)
 
-Se propone un diseño de bloques completos al azar (DBCA), con cuatro tratamientos y cuatro bloques, haciendo un total de 16 parcelas experimentales. Los tratamientos serán: T0, sin aplicación de nitrógeno; T1, con el 50 % de la dosis de referencia; T2, con el 100 % de la dosis de referencia; y T3, con el 150 % de la dosis de referencia. Esta dosis deberá establecerse previamente mediante un análisis de suelo y recomendaciones técnicas locales. En cada parcela se seleccionarán plantas centrales para su evaluación, evitando las plantas de borde. Todas las parcelas recibirán el mismo manejo agronómico, incluyendo control de malezas, sombra, riego, poda y control fitosanitario, de modo que la única diferencia entre los tratamientos sea la dosis de nitrógeno aplicada.
+diseno <- design_repblock(
+  nfactors = 2,
+  factors = factores,
+  type = "rcbd",
+  rep = 3,
+  zigzag = TRUE,
+  seed = 2026
+)
 
-## 6. Metodología
+## Vista del cuaderno de campo 
+fb <- diseno$fieldbook
 
-### 6.1. Selección del área
+fb %>%
+  knitr::kable(caption = "Vista del cuaderno de campo"
+)
+```
 
-Elegir un cafetal uniforme en variedad, edad y manejo, con acceso seguro y condiciones comparables. Registrar la ubicación, altitud, pendiente, sombra, edad de las plantas y antecedentes de fertilización.
+## Croquis experimental
 
-### 6.2. Diagnóstico inicial
+El siguiente gráfico representa la distribución espacial propuesta de las combinaciones.
 
-Tomar muestras representativas de suelo para analizar, según disponibilidad, pH, materia orgánica y nutrientes. Registrar el estado inicial de las plantas: altura, diámetro del tallo, número de ramas productivas y color general del follaje. Definir la dosis de referencia con orientación técnica.
+```{r}
 
-### 6.3. Instalación y aplicación
+# Visualización de la disposición espacial
+tarpuy_plotdesign(
+  data = diseno,
+  factor = "Variedad",
+  fill = c("plots", "Tratamiento")
+)
+```
 
-Delimitar 16 parcelas y organizar cuatro bloques. Sortear la ubicación de T0, T1, T2 y T3 dentro de cada bloque. Aplicar el fertilizante de manera fraccionada y uniforme, siguiendo la recomendación local, la etiqueta del producto y las medidas de seguridad. Evitar aplicar antes de lluvias intensas o cerca de cursos de agua.
+## Diseño de etiquetas 
 
-### 6.4. Variables que se medirán
+```{r}
+font <- c("Permanent Marker", "Tillana", "Courgette")
 
-Se medirán cinco variables principales: la altura de la planta, desde el nivel del suelo hasta el ápice, en centímetros, al inicio y cada dos o tres meses; el diámetro del tallo, utilizando un calibrador al inicio y al final del experimento; el número de ramas productivas, mediante el conteo de las ramas de las plantas seleccionadas antes de la cosecha; el rendimiento, registrando el peso de las cerezas de café cosechadas por parcela en kilogramos; y las características del follaje, observando el color de las hojas, los síntomas y los posibles daños durante cada evaluación. Para obtener resultados confiables, se marcarán las plantas seleccionadas y se utilizará el mismo método de medición durante todo el experimento. La duración del estudio deberá permitir evaluar el crecimiento de las plantas y, para determinar el rendimiento, abarcar el periodo productivo adecuado del cultivo.
+huito_fonts(font)
+```
 
-### 6.5. Análisis de datos
+```{r}
+label <- fb %>%
+  label_layout(
+    size = c(5.2, 10),
+    border_color = "#5C0000",
+    border_width = 1.5
+  ) %>%
+  include_image(
+    value = "https://inkaverse.com/img/inkaverse.png",
+    size = c(1.3, 1.5),
+    position = c(0.8, 9.1)
+  ) %>%
+  include_text(
+    value = "Café",
+    position = c(4.2, 9.1),
+    size = 20,
+    color = "black",
+    fontface = "bold",
+    font = font[1]
+  ) %>%
+  include_image(
+    value = "https://huito.inkaverse.com/img/scale.pdf",
+    size = c(5, 1),
+    position = c(2.6, 7.7)
+  ) %>%
+  include_barcode(
+    value = "qrcode",
+    size = c(5, 5),
+    position = c(2.6, 4.7)
+  ) %>%
+  include_text(
+    value = "Variedad",
+    position = c(2.6, 2),
+    size = 12,
+    prefix = "Variedad: ",
+    color = "blue",
+    font = font[2],
+    fontface = "bold"
+  ) %>%
+  include_text(
+    value = "Tratamiento",
+    position = c(2.6, 1.5),
+    size = 12,
+    prefix = "Tratamiento: ",
+    color = "red",
+    font = font[2],
+    fontface = "bold"
+  ) %>%
+  include_image(
+    value = "https://huito.inkaverse.com/img/scale.pdf",
+    size = c(5, 1),
+    position = c(2.6, 0.6)
+  )
 
-Calcular el promedio de cada variable por parcela y comparar los tratamientos considerando el diseño en bloques. Si se cumplen los supuestos estadísticos, se puede utilizar un análisis de varianza (ANOVA) y una prueba de comparación de medias. También se deben presentar tablas o gráficos con promedios y variabilidad. La conclusión se basará en los datos obtenidos, no solo en las diferencias visuales.
+label %>%
+  label_print(mode = "preview")
+```
 
-## 7. Resultados esperados
+# 7. Variables a evaluar
 
-Se espera que las dosis de nitrógeno produzcan respuestas diferentes en el crecimiento y posiblemente en el rendimiento. El tratamiento sin nitrógeno añadido podría mostrar menor crecimiento si el suelo presenta deficiencia; las dosis intermedias podrían generar una respuesta favorable; y la dosis más alta podría no aumentar el rendimiento proporcionalmente. Estos son escenarios esperados, no resultados confirmados.
+```{r}
+# 7. Variables a evaluar
 
-El experimento permitirá identificar si existe una dosis con respuesta agronómica favorable en las condiciones evaluadas. Los resultados solo podrán recomendarse para cafetales con condiciones similares y deberán interpretarse junto con el análisis del suelo, los costos del fertilizante y el rendimiento cosechado.
+library(knitr)
+library(kableExtra)
+
+variables <- data.frame(
+  Variable = c(
+    "Mortalidad",
+    "Altura",
+    "Circunferencia del tallo",
+    "Número de hojas",
+    "Peso",
+    "Raíces"
+  ),
+  `Forma de evaluación` = c(
+    "Porcentaje de plantas muertas (%)",
+    "Altura de la planta en centímetros (cm)",
+    "Medición en milímetros (mm) o centímetros (cm)",
+    "Conteo del número de hojas por planta",
+    "Peso de la muestra en gramos (g)",
+    "Peso y observación del desarrollo radicular"
+  )
+)
+
+kable(
+  variables,
+  format = "html",
+  caption = "Tabla 7. Variables evaluadas en el experimento",
+  align = c("l", "l"),
+  escape = FALSE
+) %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "responsive"),
+    full_width = TRUE,
+    position = "center"
+  ) %>%
+  row_spec(0, bold = TRUE, color = "white",
+           background = "#286747") %>%
+  column_spec(1, bold = TRUE, width = "30%") %>%
+  column_spec(2, width = "70%")
+```
+Las mediciones se realizarán en fechas previamente establecidas y de la misma manera para todas las unidades experimentales.
 
 
-## 8. Conclusión de la propuesta
+# 8. Posibles resultados esperados
 
-Esta propuesta plantea un experimento sencillo y medible para estudiar el efecto de distintas dosis de nitrógeno en el café. El uso de bloques, tratamientos comparables y mediciones repetidas ayudaría a obtener resultados más confiables. Antes de instalarlo, será necesario precisar la dosis de referencia, la duración y el número de plantas por parcela con apoyo de un asesor agrícola y de un análisis de suelo.
+Se espera encontrar diferencias en la mortalidad y el crecimiento de las plantas según la variedad y el tratamiento aplicado.
 
+El siguiente gráfico es únicamente ilustrativo: los valores son ficticios y no representan resultados experimentales reales.
 
-## 9. Referencias bibliográficas 
+```{r}
+library(ggplot2)
 
-Granados Domínguez, N. N. (2020). Niveles de fertilización nitrogenada en el primer año de crecimiento del cafeto (Coffea arabica L.) variedad Catimor T-8667 a pleno sol en Tingo María [Tesis de grado, Universidad Nacional Agraria de la Selva]. https://hdl.handle.net/20.500.14292/2365
+resultados <- data.frame(
+  Tratamiento = factor(
+    c("Testigo", "Pentacloro", "Trichoderma",
+      "Orín fermentado"),
+    levels = c("Testigo", "Pentacloro",
+               "Trichoderma", "Orín fermentado")
+  ),
+  Mortalidad = c(40, 20, 15, 25)
+)
 
-Salgado Veramendi, N., & Ottos Díaz, E. (2025). Manual técnico: Interpretación de análisis de suelos, cálculos de encalado y fertilización para los cultivos de café y cacao. Instituto Nacional de Innovación Agraria.
+ggplot(resultados,
+       aes(x = Tratamiento, y = Mortalidad)) +
+  geom_col(fill = "#639878", width = 0.65) +
+  geom_text(
+    aes(label = paste0(Mortalidad, "%")),
+    vjust = -0.4
+  ) +
+  labs(
+    title = "Ejemplo ilustrativo de mortalidad",
+    x = "Tratamiento",
+    y = "Mortalidad (%)"
+  ) +
+  coord_cartesian(ylim = c(0, 50)) +
+  theme_minimal()
+```
 
----
+# 9. Conclusión esperada
+
+Se espera determinar si existen diferencias entre las dos variedades de café y los tratamientos evaluados. La información obtenida permitirá identificar alternativas que merezcan una evaluación posterior para el manejo del pie negro. La efectividad de cada tratamiento solo podrá establecerse después de realizar el experimento y analizar los datos.
+
+# 10. Referencias
+
+Delgado Reynaga, Y. (2023). Efecto de cinco productos en el control de pie negro (Rosellinia bunodes) en cafeto (Coffea arabica L.) en el sector de Espíritu Pampa, Vilcabamba - La Convención [Tesis para optar el título profesional de Ingeniero Agrónomo Tropical, Universidad Nacional de San Antonio Abad del Cusco]. Repositorio Institucional de la UNSAAC.
+
